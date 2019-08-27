@@ -1,2 +1,2 @@
-# website_skeleton.github.io
-A skeleton for a website
+# github_pages_tutorial
+A tutorial for Github Pages
