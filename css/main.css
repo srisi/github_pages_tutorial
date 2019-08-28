@@ -1,6 +1,18 @@
 body {
     padding-top: 150px;
+
+}
+
+.column, .navbar {
     font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 100rem;
 }
 
 
@@ -23,4 +35,17 @@ img {
     height: auto;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+
+#blanker {
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+
 }
