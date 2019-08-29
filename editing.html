@@ -12,11 +12,9 @@
 
     <!-- Load JQuery and Bootstrap. They are javascript library that handle the layouting for us.-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <!--Set the title for the page-->
-    <title>Github Pages Tutorial</title>
 
     <!-- The nav bar remains the same for every page, so by defining it in only one file, we only
      need to edit it in one place when we make changes to it. -->
@@ -24,6 +22,9 @@
 
     <!-- Import the css file, which defines how our website looks -->
     <link href="css/main.css" rel="stylesheet">
+
+    <!--Set the title for the page-->
+    <title>Editing the Website</title>
 
 </head>
 
@@ -34,60 +35,59 @@
     <!--This element is a placeholder for the header with the navbar, which we load above-->
     <div id="header"></div>
 
+    <div class="column">
 
-    <!--<div> (for "division") are the main building blocks of our website. -->
-    <!--Since we work with bootstrap, we need to work with their layout. -->
-    <!--For a general introduction on their grid system, see https://getbootstrap.com/docs/4.0/layout/grid/-->
+        <h1>Editing the Website</h1>
+        <p>Having a website is fun. Changing it even more so.</p>
+        <p>There are many ways of modifying our website. We will focus just on the simplest ones here.</p>
+        <p>This is supposed to be your personal website or a project website, not a tutorial. So 
+            let’s change things around.</p>
+        <p>To get started, go to the github page for your repository. It will be at 
+            <code>github.com/&lt;username&gt;/&lt;username&gt;.github.io</code> <br>Once you’re there, it should say
+            <code>&lt;username&gt; / &lt;username&gt;.github.io</code> at the top.</p>
+        <p>Then click on index.html. (Note: The list of files that you see in your repository probably 
+            differ from the screenshot below. I’m taking screenshots as I am adding new files to this tutorial.)</p>
+        <p><img src="images/tutorials/editing_click_index.png" alt="Repo image. Select index.html"></p>
+        <p>This shows you the code used to generate the landing page for your website. It is called
+            index.html by default.</p>
+        <p>All the lines that start with <code>&lt;!--</code> and ends with <code>--&gt;</code> are
+            comments that I have added to explain what’s going on.
+        <img src="images/tutorials/editing_index_overview.png" alt="Overview of index.html"></p>
+        <p>Really, most of this is scaffolding. You can see the actual content of the website when you scroll down:</p>
+        <p><img src="images/tutorials/editing_index_content.png" alt="Actual content of index.html"></p>
+        <p>If we want to make changes to our website, we can simply click the edit button in the
+            top-right corner.
+        <img src="images/tutorials/editing_edit_button.png" alt="editing button"></p>
+        <p>There’s no stopping us now!</p>
+        <p>Let’s change the main heading of the website to “Hello World!” in the long tradition of
+            <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">hello world programs</a> .</p>
+        <p>To do this, scroll down until you see <code>&lt;h1&gt;Welcome to the Github Pages Tutorial&lt;/h1&gt;</code></p>
+        <p>Replace this line with
+        <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code></p>
+        <p><img src="images/tutorials/editing_hello_world.png" alt="insert Hello World!"></p>
 
+        <p>Next, let's store this change.</p>
 
-    <!--Here's the shortest summary: Every page requires a container-->
-    <div class="container">
-
-        <!--Each container can contain one or multiple horizontal rows-->
-        <div class="row">
-
-            <!--And each row can contain one or multiple vertical columns-->
-            <div class="col">
-
-
-                <h1 id="setup">Setup</h1>
-                <p>Welcome!</p>
-                <p>This section of the tutorial will walk you through the inital setup up to the point
-                    where you have an exact replica of this tutorial website up and running.</p>
-                <p>To get started, you will need a <a href="https://www.github.com">Github</a> account. If you
-                    don’t already have one, go to <a href="https://www.github.com">www.github.com</a> and create one.</p>
-                <p><img class='img' src="images/setup_account_creation.png" alt="Github Account Creation"></p>
-                <p>If you’re a student, you can sign up for the  <a href="https://education.github.com/pack">student developer pack</a>,
-                which gives you access to a lot of different tools. The free account is also perfectly fine, though.</p>
-                <p><img src="images/setup_account_selection.png"
-                        alt="Github Account Selection"></p>
-                <p>Once your account is set up, Github might ask you if want to create your first repository.
-                “Repository” is Github’s name for a place where you can keep all of the files for one project
-                or one website. However, we’re not going to create a new repository right now, so you can close
-                the  dialog box.</p>
-                <p><img src="images/setup_repo_creation.png" alt="Don't initialize a repo"></p>
-                <p>Instead of creating a new repository, we are going to copy the existing tutorial. To do this, go to
-                the <a href="https://github.com/srisi/github_pages_tutorial/">Github website for this tutorial</a> and click
-                on the “Fork” button in the top right corner.</p>
-                <p>Forking means that you’re creating your own copy of the github_pages_tutorial repository, which
-                you can now edit on your own.
-                <img src="images/setup_fork.png" alt="Github Pages Tutorial Website"></p>
-                <p>Once the repository is copied, your screen should look like this. Now we just have one step left. We need to rename it.
-                    To do this, click on Settings.</p>
-                <p><img src="images/setup_repo_settings.png" alt="Forked github repo"></p>
-                <p>By default, Github assumes that a repository just contains code. To make your new website visible
-                to everyone, we need to follow Github’s naming scheme.</p>
-                <p>Specifically, you need to rename your repository to <code>&lt;username&gt;.github.io</code>. In my case, it is
-                <a href="http://risi-temp.github.io">risi-temp.github.io</a> .</p>
-                <p><img src="images/setup_forked_website.png" alt="Github Forked Website"></p>
-                <p>Voila, once this change is applied, your website is ready! It is an exact copy of this tutorial
-                website ready for you to modify. Go to <code>&lt;username&gt;.github.io</code> to check it out.</p>
-
-                <p></p>
-                <p>Having a website is fun. Now let's look at how to edit it.</p>
-
-            </div>
-        </div>
+        <p>Before Github became the place to host websites, git (the technical tool) and Github
+            (the website) were used to host code. More specifically, they allow programmers to
+            save incremental changes and reset their code to safe points. If you have heard about
+            “version control,” that’s what this means.</p>
+        <p>To keep track of the changes, Github expects you to write a short summary of the changes
+            that you make at the bottom of the page.</p>
+        <p>For this project, always directly commit your changes to the master branch. Git gives
+            you the option of creating multiple independent branches of your project which, is probably
+            not what you want to get involved in (c.f. the ever relevant
+            <a href="https://xkcd.com/1597/">Randall Munroe</a>).</p>
+        <p>When you’re happy with your changes and description, click “Commit changes.”
+        <img src="images/tutorials/editing_commit_changes.png" alt="insert Hello World!"></p>
+        <p>Now go to your website at, <code>&lt;username&gt;.github.io</code><br>
+        Note: You may have to wait a minute or two for the change to show up on your website. You can also try
+        to force a "hard reload," which ignores files in your browser's cache by pressing Ctrl+R or Command+R.</p>
+        <p><img src="images/tutorials/editing_updated_website.png" alt="Updated website"></p>
+        <p>Alright! You have just made the first change to your website.</p>
+        <p>The <a href="html_basics.html">next section</a> will teach you all of the basics of html
+            that you need to know to display your first blog post.</p>
+        
     </div>
 
 </body>

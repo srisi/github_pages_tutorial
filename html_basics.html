@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--The head contains metadata about our page and it's the place where we can load css files (for -->
+<!--styling) and javascript files.-->
+<head>
+
+    <meta name="author" content="Stephan Risi">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Load JQuery and Bootstrap. They are javascript library that handle the layouting for us.-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- The nav bar remains the same for every page, so by defining it in only one file, we only
+     need to edit it in one place when we make changes to it. -->
+    <script> $(function(){$("#header").load("header.html");});</script>
+
+    <!-- Import the css file, which defines how our website looks -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!--Set the title for the page-->
+    <title>HTML Basics</title>
+
+</head>
+
+
+<!--We define the elements that we actually want to display in the body element-->
+<body>
+
+    <!--This element is a placeholder for the header with the navbar, which we load above-->
+    <div id="header"></div>
+
+    <div class="column">
+
+        <h1>HTML Basics</h1>
+        <p>HTML is the standard language used to define what you want to display on your webpage. It stands for HyperText Markup Language.</p>
+        <p>With HTML, you can tell a browser to display some text as a heading or to draw a table for you. It’s a simple but powerful language.</p>
+        <p>in this part, we will give you all the basics that you need to know to write a simple blogpost. In the <a href="links.html">next part</a>,
+            we’ll look at how to integrate links and images on your page.</p>
+        <p>If you want to learn more, have a look at the HTML tutorial created by <a href="https://www.w3schools.com/html/default.asp">w3schools</a>.
+            w3schools also has a <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default">very cool editor</a> that allows you to
+            play around with html and immediately displays the results of the change.</p>
+
+        <h2>Blog Post Template</h2>
+        <p>Here’s a simple blog post template that we’ll use to explore the anatomy of a webpage.</p>
+        <p><img src="images/tutorials/basic_html_layout.png" alt="HTML Code and rendered version of a blog post template"></p>
+
+        <p>HTML consists of nested elements. Each element gets opened with <code>&lt;element&gt;</code> and closed with <code>&lt;/element&gt;</code>.</p>
+        <p>Remember from the last section: <code>&lt;h1&gt;</code> opens a header-1 (the largest kind of header) and <code>&lt;/h1&gt;</code> closes it.</p>
+
+        <h2><code>&lt;head&gt;</code> and <code>&lt;body&gt;</code></h2>
+        <p>The two main parts of a webpage are the <code>&lt;head&gt;</code> and the <code>&lt;body&gt;</code>.</p>
+        <p>The contents of <code>&lt;head&gt;</code> are not displayed. Instead, it’s where javascript and css files can be loaded and where you can set the title of the webpage. The title set here is not displayed on the webpage itself but rather shows up in the browser tab.<br>
+        Except for setting the title, you can leave the <code>&lt;head&gt;</code> untouched and just copy its content to new pages.</p>
+        <p>The <code>&lt;body&gt;</code> is what actually gets displayed on the webpage.</p>
+
+        <h2>Divs</h2>
+        <p>The <code>&lt;body&gt;</code> usually consists of a number of <code>&lt;div&gt;</code> (“division”) elements.<br>
+        There are two divs in our blog post template.<br>
+        The first one renders the navigation bar at the top of the website. Rendering it involves some trickery that we will ignore for the moment.<br>
+        The second div consists of the content of the blogpost. Note that this div has the class “column.” The class defines how the div should be rendered–What font? How much whitespace? How to handle small devices? You don’t need to know how styling with cascading stylesheets (css) work for the moment. Just make sure that when you create a new page, the div with most of your content has the class “column” like so:</p>
+        <pre><code>&lt;div class="column"&gt;
+            ....
+        &lt;/div&gt;
+        </code></pre>
+
+        <h2>Headings and Paragraphs</h2>
+        <p>Your actual blogpost will consist of headings and paragraphs.<br>
+        We have already seen <code>&lt;h1&gt;</code>, the largest kind of heading:</p>
+        <h1>h1</h1>
+        <p>HTML provides you with six different headings from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, the smallest one:</p>
+        <h6>h6</h6>
+        <p>The actual text of your blog post belongs into <code>&lt;p&gt;</code> (“paragraph”) elements, which handle, for example, line breaks for you.</p>
+        <p>That should give you all you need to know to write your first blog post. I suggest that you try to get this template to work on your
+            landing page (index.html). Once you’re done, you can move on to the <a href="links.html">next section</a>, which deals with links and images.</p>
+
+    </div>
+
+</body>

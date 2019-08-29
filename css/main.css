@@ -9,6 +9,7 @@ body {
     padding-left: 10%;
     padding-right: 10%;
     max-width: 100rem;
+    padding-bottom: 10%;
 }
 
 
@@ -18,7 +19,10 @@ h1 {
     margin-bottom: 1.5rem;
     font-size: 3.2rem;
     line-height: 1;
+}
 
+h2 {
+    padding-top: 30px;
 }
 
 p {

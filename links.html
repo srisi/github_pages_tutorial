@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--The head contains metadata about our page and it's the place where we can load css files (for -->
+<!--styling) and javascript files.-->
+<head>
+
+    <meta name="author" content="Stephan Risi">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Load JQuery and Bootstrap. They are javascript library that handle the layouting for us.-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- The nav bar remains the same for every page, so by defining it in only one file, we only
+     need to edit it in one place when we make changes to it. -->
+    <script> $(function(){$("#header").load("header.html");});</script>
+
+    <!-- Import the css file, which defines how our website looks -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!--Set the title for the page-->
+    <title>Links and Images</title>
+
+</head>
+
+
+<!--We define the elements that we actually want to display in the body element-->
+<body>
+
+    <!--This element is a placeholder for the header with the navbar, which we load above-->
+    <div id="header"></div>
+
+
+
+    <div class="column">
+
+        <h1>Links and Images</h1>
+        <p>Text is nice. But if we’re already creating a website, we’ll also want to include links and images. Here’s how:</p>
+
+        <h2>Links</h2>
+        <p>Links forward users to different websites. They have two main parts: The page that we want to link to and the clickable text that we want to display.</p>
+        <p><code>&lt;a href="https://web.site"&gt;Clickable Text&lt;/a&gt;</code></p>
+        <p>Becomes <a href="https://web.site">Clickable Text</a> (Don’t click on it though–web.site does not exist.)</p>
+        <p><code>href</code> stands for “hypertext reference,” the place that we’re linking to. <code>&lt;a&gt;&lt;/a&gt;</code> stands for “anchor” element.)</p>
+        <p>To use a working example we can link to Wikipedia in the following way:<br>
+        <code>&lt;a href="https://en.wikipedia.org/wiki/Main_Page"&gt;Wikipedia&lt;/a&gt;</code></p>
+
+        <h2>URLs and Relative Paths</h2>
+        <p>Here’s something fun: We can not just link to other websites, we can also link to files in our repository. These are called “relative paths,”
+            because the link is relative to our current file.</p>
+        <p>Let’s say that I want to create a link to my landing page, index.html. If you look at our <a href="https://github.com/srisi/github_pages_tutorial">repository</a>,
+            you can see that links.html (the file I’m currently editing) and index.html are in the same directory. In this case, if I want to link to
+            index.html, I can create a link like this:<br>
+        <code>&lt;a href="index.html"&gt;Landing Page&lt;/a&gt;</code><br>
+        This becomes: <a href="index.html">Landing Page</a><br>
+        If you hover over the link, you can see that Github automatically turns the relative path <code>index.html</code> into the URL <code>https://&lt;username&gt;.github.io/index.html</code></p>
+        <p>Relative links work with files in subfolders as well. For example, all of the screenshots used in the tutorials are in the “images” and then “tutorials” folder." If we want to link to one of the images in that folder, we can create a link like this:<br>
+        <code>&lt;a href="images/tutorials/updated_website.png"&gt;Tutorial Image&lt;/a&gt;</code><br>
+        This becomes: <a href="images/tutorials/editing_updated_website.png">Tutorial Image</a></p>
+
+        <h2>Images</h2>
+        <p>Images work very similar to links. The general syntax is<br>
+        <code>&lt;img src="https://image.url"&gt;&lt;/img&gt;</code></p>
+        <p>For example, you can find an image of a <a href="https://commons.wikimedia.org/wiki/File:The_Puppy.jpg">cute puppy</a> on the Wikipedia Commons, hosted with a Creative Commons license.</p>
+        <p>If we want to display the image, we can do so like this:<br>
+        <code>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/The_Puppy.jpg/800px-The_Puppy.jpg"&gt;&lt;/img&gt;</code><br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/The_Puppy.jpg/800px-The_Puppy.jpg"></p>
+        <p>Just like links, images can use relative paths or absolute URLs. The images folder of our repository contains another
+            <a href="https://en.wikipedia.org/wiki/File:Image-Cavapoo_puppy.JPG">puppy image</a> from the Wikipedia Commons called "puppy.jpg."
+            To display it, we can use a relative path:<br>
+        <code>&lt;img src="images/puppy.jpg"&gt;&lt;/img&gt;</code><br>
+        <img src="images/puppy.jpg"></p>
+        <p>Finally, to make your website accessible, you should include a description of each image in the image tag, which helps people who use
+            screen-readers understand what gets displayed in the image. Adding a description works like this:<br>
+        <code>&lt;img src="images/puppy.jpg" alt="An Image of a Puppy"&gt;&lt;/img&gt;</code></p>
+        <p>I suggest that you play around with links and images on your  landing page (index.html). Once you’re done, we’ll move on to the last section: <a href="pages.html">creating and deleting new pages</a>.</p>
+
+
+    </div>
+
+</body>
