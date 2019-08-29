@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--The head contains metadata about our page and it's the place where we can load css files (for -->
+<!--styling) and javascript files.-->
+<head>
+
+    <meta name="author" content="Stephan Risi">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Load JQuery and Bootstrap. They are javascript library that handle the layouting for us.-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- The nav bar remains the same for every page, so by defining it in only one file, we only
+     need to edit it in one place when we make changes to it. -->
+    <script> $(function(){$("#header").load("header.html");});</script>
+
+    <!-- Import the css file, which defines how our website looks -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!--Set the title for the page-->
+    <title>HTML Basics</title>
+
+</head>
+
+
+<!--We define the elements that we actually want to display in the body element-->
+<body>
+
+    <!--This element is a placeholder for the header with the navbar, which we load above-->
+    <div id="header"></div>
+
+    <div class="column">
+
+        <h1>Adding and Removing Pages</h1>
+        <p>So far, we have only made changes to existing pages, specifically index.html. What if we want to add new pages? Or delete existing ones?</p>
+
+        <h2>Adding a New Page</h2>
+        <p>Let’s use the blog post template from the previous sections and display it on a new page, blogpost.html.<br>
+        To do this, go to the github page of your repository (<code>https://github.com/&lt;username&gt;/&lt;username&gt;.github.io</code>) and click
+            “Create New File.”<br>
+        <img src="images/tutorials/adding_new_file.png" alt="Screenshot of the github repository page with &quot;Create New File&quot; button highlighted"></p>
+        <p>Name the new file blogpost.html and copy all of the boilerplate code (i.e. everything except the content of the “column” div element) from index.html.<br>
+        <img src="images/tutorials/adding_boilerplate.png" alt="Screenshot of the new blogpost.html with all the boilerplate code from index.html"></p>
+        <p>Next, fill in the contents of your blogpost.<br>
+        <img src="images/tutorials/adding_content.png" alt="Screenshot of blogpost.html with blog content added"></p>
+        <p>Finally, we’re ready to save (“commit”) the changes. Add a short description and then click “Commit new file”.<br>
+        <img src="images/tutorials/adding_commit.png" alt="Screenshot of github commit form"></p>
+        <p>If you now go to <code>&lt;username&gt;.github.io/blogpost</code>, you should be able to see your blogpost.<br>
+        <img src="images/tutorials/adding_blogpost_display.png" alt="Screenshot of rendered blogpost.html"></p>
+
+        <h2>Modifying the Header</h2>
+        <p>Right now, you can navigate to blogpost.html. But what we really want is to add the blogpost to the navigation bar at the top.
+        We can do this by modifying the header.html file. header.html contains the html for the navbar and is automatically loaded on everyone of our pages.</p>
+        <p>As before, click on header.html in your repository and then click on the edit button in the top right as explained <a href="editing.html">here</a>.</p>
+        <p>header.html contains a lot of boilerplate, for example, to convert the navbar into a drop-down menu on small screen.</p>
+        <p>We only need to pay attention to two things: the project title and the individual navigation items in light-blue.</p>
+        <p><img src="images/tutorials/adding_header_overview.png" alt="Screenshot of header.html"></p>
+
+        <p>The second line,<br>
+        <code>&lt;a class="navbar-brand" href="index.html"&gt;Github Pages Tutorial&lt;/a&gt;</code>, controls what gets displayed as the title of
+            your website in the left corner of the navbar. Change <code>Github Pages Tutorial</code> to something that describes the purpose of your
+            website. Let’s say <code>Puppies!</code></p>
+        <p>Next, let’s change the items in  the navbar. Each is defined by a “nav-item” <code>&lt;li&gt;</code> element.<br>
+        To add a link to your blogpost, you can just add a new <code>&lt;li&gt;</code> element.</p>
+        <pre><code>
+        &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link" href="blogpost.html"&gt;Blog Post&lt;/a&gt;
+        &lt;/li&gt;
+        </code></pre>
+        <p>While you’re at it, you can also delete the other elements from the navbar–you don’t want to display the links to the different sections
+            of this tutorial on your website. (You can always find the original at
+            <a href="https://srisi.github.io/github_pages_tutorial/">https://srisi.github.io/github_pages_tutorial/</a> though.)</p>
+        <p>Voila, your new much shorter navbar.<br>
+        <img src="images/tutorials/adding_navbar_modified.png" alt="Screenshot of modified navbar code"></p>
+        <p>You can now commit the changes. Once you reload your website, you should see your newly modified navbar with a working link to your blog post.</p>
+        <p><img src="images/tutorials/adding_navbar_final.png" alt="Screenshot of webpage with modified navbar"></p>
+
+        <h2>Removing pages</h2>
+        <p>Strictly speaking, you don’t need to remove superfluous html files like setup.html. If they aren’t linked on your page, no one will likely
+            look at them. But you can also just delete them by opening the file on Github, clicking on the trash button, and then committing the change.</p>
+
+        <p><img src="images/tutorials/adding_delete.png" alt="Screenshot of setup.html with highlighted trash button"></p>
+
+    </div>
+
+</body>
