@@ -8,7 +8,7 @@
 
     <meta name="author" content="Stephan Risi">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
 
     <!-- Load JQuery and Bootstrap. They are javascript library that handle the layouting for us.-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -34,79 +34,65 @@
     <!--This element is a placeholder for the header with the navbar, which we load above-->
     <div id="header"></div>
 
+    <div class="column">
 
-    <!--<div> (for "division") are the main building blocks of our website. -->
-    <!--Since we work with bootstrap, we need to work with their layout. -->
-    <!--For a general introduction on their grid system, see https://getbootstrap.com/docs/4.0/layout/grid/-->
+        <!--h1 stands for heading 1, the largest kind of header. You can add smaller headings with h2, h3 etc.-->
+        <h1 id="setup">Setup</h1>
 
+        <!--p stands for paragraph, the main text building blocks we're working with.-->
+        <p>Welcome!</p>
+        <p>This section of the tutorial will walk you through the inital setup up to the point
+            where you have an exact replica of this tutorial website up and running.</p>
+        <p>To get started, you will need a
 
-    <!--Here's the shortest summary: Every page requires a container-->
-    <div class="container">
+            <!--This is a link. It contains the website we link to as a href (hypertext reference)-->
+            <!--as well as the clickable link text. Here, we're linking to github.com and display -->
+            <!--the term Github-->
+            <!-- Here's how links work generally: <a href="website-we-link.to">Clickable link text</a>-->
+            <a href="https://www.github.com">Github</a>
 
-        <!--Each container can contain one or multiple horizontal rows-->
-        <div class="row">
+            account. If you don’t already have one, go to <a href="https://www.github.com">www.github.com</a> and create one.</p>
+        <p>
+            <!--Here's an image. Each image has a source (src).-->
+            <!--The source can be "relative" or "absolute."-->
+            <!--"Absolute" means that you provide a complete url, for example  -->
+            <!--"Relative" means that we provide the path relative to where the current file is. -->
+            <!--Below you see a relative path "images/setup_account_creation.png". -->
+            <!--This tells the browser to load the "setup_account_creation.png" file from the -->
+            <!--"images" folder. If you go to your repository, you can see that there is indeed -->
+            <!--a "setup_account_creation.png" file there.-->
+            <img src="images/setup_account_creation.png" alt="Github Account Creation">
+        </p>
+        <p>If you’re a student, you can sign up for the  <a href="https://education.github.com/pack">student developer pack</a>,
+        which gives you access to a lot of different tools. The free account is also perfectly fine, though.</p>
+        <p><img src="images/setup_account_selection.png"
+                alt="Github Account Selection"></p>
+        <p>Once your account is set up, Github might ask you if want to create your first repository.
+        “Repository” is Github’s name for a place where you can keep all of the files for one project
+        or one website. However, we’re not going to create a new repository right now, so you can close
+        the  dialog box.</p>
+        <p><img src="images/setup_repo_creation.png" alt="Don't initialize a repo"></p>
+        <p>Instead of creating a new repository, we are going to copy the existing tutorial. To do this, go to
+        the <a href="https://github.com/srisi/github_pages_tutorial/">Github website for this tutorial</a> and click
+        on the “Fork” button in the top right corner.</p>
+        <p>Forking means that you’re creating your own copy of the github_pages_tutorial repository, which
+        you can now edit on your own.
+        <img src="images/setup_fork.png" alt="Github Pages Tutorial Website"></p>
+        <p>Once the repository is copied, your screen should look like this. Now we just have one step left. We need to rename it.
+            To do this, click on Settings.</p>
+        <p><img src="images/setup_repo_settings.png" alt="Forked github repo"></p>
+        <p>By default, Github assumes that a repository just contains code. To make your new website visible
+        to everyone, we need to follow Github’s naming scheme.</p>
+        <p>Specifically, you need to rename your repository to <code>&lt;username&gt;.github.io</code>. In my case, it is
+        <code>mit-risi.github.io</code>.</p>
+        <p><img src="images/setup_forked_website.png" alt="Github Forked Website"></p>
+        <p>Voila, once this change is applied, your website is ready! It is an exact copy of this tutorial
+        website ready for you to modify. Go to <code>&lt;username&gt;.github.io</code> to check it out.
+        In my case, it's <a href="https://mit-risi.github.io">mit-risi.github.io</a></p>
 
-            <!--And each row can contain one or multiple vertical columns-->
-            <div class="col">
+        <p></p>
+        <p>Having a website is fun. Now let's look at how to edit it.</p>
 
-                <!--h1 stands for heading 1, the largest kind of header. You can add smaller headings with h2, h3 etc.-->
-                <h1 id="setup">Setup</h1>
-
-                <!--p stands for paragraph, the main text building blocks we're working with.-->
-                <p>Welcome!</p>
-                <p>This section of the tutorial will walk you through the inital setup up to the point
-                    where you have an exact replica of this tutorial website up and running.</p>
-                <p>To get started, you will need a
-
-                    <!--This is a link. It contains the website we link to as a href (hypertext reference)-->
-                    <!--as well as the clickable link text. Here, we're linking to github.com and display -->
-                    <!--the term Github-->
-                    <!-- Here's how links work generally: <a href="website-we-link.to">Clickable link text</a>-->
-                    <a href="https://www.github.com">Github</a>
-
-                    account. If you don’t already have one, go to <a href="https://www.github.com">www.github.com</a> and create one.</p>
-                <p>
-                    <!--Here's an image. Each image has a source (src).-->
-                    <!--The source can be "relative" or "absolute."-->
-                    <!--"Absolute" means that you provide a complete url, for example  -->
-                    <!--"Relative" means that we provide the path relative to where the current file is. -->
-                    <!--Below you see a relative path "images/setup_account_creation.png". -->
-                    <!--This tells the browser to load the "setup_account_creation.png" file from the -->
-                    <!--"images" folder. If you go to your repository, you can see that there is indeed -->
-                    <!--a "setup_account_creation.png" file there.-->
-                    <img src="images/setup_account_creation.png" alt="Github Account Creation">
-                </p>
-                <p>If you’re a student, you can sign up for the  <a href="https://education.github.com/pack">student developer pack</a>,
-                which gives you access to a lot of different tools. The free account is also perfectly fine, though.</p>
-                <p><img src="images/setup_account_selection.png"
-                        alt="Github Account Selection"></p>
-                <p>Once your account is set up, Github might ask you if want to create your first repository.
-                “Repository” is Github’s name for a place where you can keep all of the files for one project
-                or one website. However, we’re not going to create a new repository right now, so you can close
-                the  dialog box.</p>
-                <p><img src="images/setup_repo_creation.png" alt="Don't initialize a repo"></p>
-                <p>Instead of creating a new repository, we are going to copy the existing tutorial. To do this, go to
-                the <a href="https://github.com/srisi/github_pages_tutorial/">Github website for this tutorial</a> and click
-                on the “Fork” button in the top right corner.</p>
-                <p>Forking means that you’re creating your own copy of the github_pages_tutorial repository, which
-                you can now edit on your own.
-                <img src="images/setup_fork.png" alt="Github Pages Tutorial Website"></p>
-                <p>Once the repository is copied, your screen should look like this. Now we just have one step left. We need to rename it. 
-                    To do this, click on Settings.</p>
-                <p><img src="images/setup_repo_settings.png" alt="Forked github repo"></p>
-                <p>By default, Github assumes that a repository just contains code. To make your new website visible
-                to everyone, we need to follow Github’s naming scheme.</p>
-                <p>Specifically, you need to rename your repository to <code>&lt;username&gt;.github.io</code>. In my case, it is
-                <a href="http://risi-temp.github.io">risi-temp.github.io</a> .</p>
-                <p><img src="images/setup_forked_website.png" alt="Github Forked Website"></p>
-                <p>Voila, once this change is applied, your website is ready! It is an exact copy of this tutorial
-                website ready for you to modify. Go to <code>&lt;username&gt;.github.io</code> to check it out.</p>
-
-                <p></p>
-                <p>Having a website is fun. Now let's look at how to edit it.</p>
-
-            </div>
-        </div>
     </div>
 
 </body>

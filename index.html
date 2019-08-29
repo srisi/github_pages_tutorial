@@ -8,7 +8,7 @@
 
     <meta name="author" content="Stephan Risi">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
 
     <!-- Load JQuery and Bootstrap. They are javascript library that handle the layouting for us.-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -34,43 +34,48 @@
     <!--This element is a placeholder for the header with the navbar, which we load above-->
     <div id="header"></div>
 
+    <!--a div (for division) defines a section of the page. By giving the div below (which contains-->
+    <!--all of the text the class "column", we can control, for example, how large the borders to the-->
+    <!--left and right of the page should be.-->
+    <div class="column">
+        <!--And with that, we can finally display the actual text on the website:-->
 
-    <!--<div> (for "division") are the main building blocks of our website. -->
-    <!--Since we work with bootstrap, we need to work with their layout. -->
-    <!--For a general introduction on their grid system, see https://getbootstrap.com/docs/4.0/layout/grid/-->
+        <!--h1 stands for heading 1, the largest kind of header. You can add smaller headings with h2, h3 etc.-->
+        <!--Note: we need to both open (<h1>) and close (</h1>) all of the tags that we use.-->
+﻿       <h1>Welcome to the Github Pages Tutorial</h1>
 
+        <!--p stands for paragraph, the main text building blocks we're working with.-->
+        <p>Hi there! This is a tutorial on how to set up a simple static website with
 
-    <!--Here's the shortest summary: Every page requires a container-->
-    <div class="container">
+            <!--This is a link. It contains the website we link to as a href (hypertext reference)-->
+            <!--as well as the clickable link text. Here, we're linking to pages.github.com and display -->
+            <!--the term Github Pages-->
+            <!-- Here's how links work generally: <a href="website-we-link.to">Clickable link text</a>-->
+            <a href="https://pages.github.com/">Github Pages</a>
 
-        <!--Each container can contain one or multiple horizontal rows-->
-        <div class="row">
+            created by <a href="http://web.mit.edu/crystall/www/">Crystal Lee</a> and
+            <a href="http://stanford.edu/~risi/">Stephan Risi</a>.
+        </p>
 
-            <!--And each row can contain one or multiple vertical columns-->
-            <div class="col">
+        <p>
+            The beauty of using Github Pages is that you don’t need to worry about hosting or
+            setting up your own server. You can just create and edit html files and they will
+            be immediately available to everyone. This tutorial is inspired by a similar
+            <a href="http://miriamposner.com/classes/dh201w19/tutorials-guides/web-development/publish-your-website-with-github-pages/">tutorial</a>
+            created by <a href="http://miriamposner.com/">Miriam Posner</a>, who has also
+            <a href="http://miriamposner.com/classes/dh201w19/final-project/building-your-project-site/">written
+                about the advantages and disadvantages of using Github Pages</a> in more detail.
+        </p>
 
+        <p>
+            We will walk you through the process of setting up a <a href="https://github.com">Github</a>
+            account, making edits to the page, and using it as a place to host your own work.
+        </p>
 
-                <!--And with that, we can finally display the meat of the website:-->
+        <p>
+            Whenever you’re ready you can get started with the first section,
+            <a href="setup.html">setup</a>.
+        </p>
 
-                <!--h1 stands for heading 1, the largest kind of header. You can add smaller headings with h2, h3 etc.-->
-                <h1>Welcome to the Github Pages Tutorial</h1>
-
-                <!--p stands for paragraph, the main text building blocks we're working with.-->
-                <p>Hi there! This is a tutorial on how to set up a simple static website
-                    with
-
-                    <!--This is a link. It contains the website we link to as a href (hypertext reference)-->
-                    <!--as well as the clickable link text. Here, we're linking to pages.github.com and display -->
-                    <!--the term Github Pages-->
-                    <!-- Here's how links work generally: <a href="website-we-link.to">Clickable link text</a>-->
-                    <a href="https://pages.github.com/">Github Pages</a>.
-                </p>
-                <p>We will walk you through the process of setting up a <a href="https://github.com">Github</a> account,
-                    making edits to the page, and using it as a place to host your own work.</p>
-                <p>Whenever you’re ready you can get started with the first section, <a href="setup.html">setup</a>.</p>
-
-            </div>
-        </div>
     </div>
-
 </body>

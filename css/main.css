@@ -3,6 +3,14 @@ body {
     font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 100rem;
+}
+
 
 h1 {
     font-weight: 400;
