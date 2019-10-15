@@ -36,3 +36,17 @@ img {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+
+.schedule_week{
+    padding-bottom: 50px;
+    padding-left: 20px;
+}
+
+h3{
+    margin-left: -20px;
+}
+
+h4{
+    font-size: 1.4rem;
+}
