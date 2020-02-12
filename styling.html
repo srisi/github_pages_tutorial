@@ -50,5 +50,129 @@
         <h2 class="header_large">Title</h2>
         <p>Or we can add a text shadow:</p>
         <h2 class="header_text_shadow">Title</h2>
+
+        <p>All of our styling information can be found in <a href="https://github.com/srisi/
+        github_pages_tutorial/blob/master/css/main.css">main.css</a> in the css folder. Here's
+        a small sample from that file:</p>
+        <p><img src="images/tutorials/styling_selectors1.png"
+                alt="Screenshot from css/main.css"></p>
+        <p>Each component in the css file has two parts: the selector (in green) and the
+        applied styles (in blue).</p>
+        <p>For example, <code> h2 { padding-top: 30px; }</code> means: Select all h2 (heading2)
+            elements and add 30 pixels of padding (whitespace) above them.</p>
+        <p>
+            <code>p { <br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.4rem;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;line-height: 2rem;<br/>
+                }
+            </code>
+        </p>
+        <p>This means: Select all paragraph elements and increase the font size to 1.4 times its
+            default value (16pts) and make each line two default values (2 * 16 pts) high.</p>
+        <p>If we want to change the font for all paragraphs to Arial, we can just add a third
+            line to this selector:</p>
+        <p>
+            <code>p { <br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.4rem;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;line-height: 2rem;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-family: arial;<br/>
+                }
+            </code>
+        </p>
+
+
+        <p>There is an almost infinite number of modifications that you can make with CSS.
+        <a href="https://www.w3schools.com/css/">W3 Schools</a> has a good tutorial available.
+        Very often, though, the most effective way of finding what you're looking for is to
+        just google for the setting that you need. Want to underline some text? Google "text
+        underline css" and you'll land on the <a
+            href="https://www.w3schools.com/cssref/pr_text_text-decoration.asp"> text-decoration</a>
+            property.</p>
+
+
+        <h2>Class Selectors</h2>
+        <p>
+            Usually, you don't want to globally change the style of all paragraph or heading
+            elements but rather only those of a select few. You can accomplish this with
+            class selectors. What that means is that you assign classes to the elements that you
+            want to change.
+        </p>
+        <p>Let's say that we have a blog post with two paragraphs:</p>
+
+        <p>
+        <code>
+            &lt;p&gt;1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.&lt;/p&gt; <br/>
+            &lt;p&gt;2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+        </code>
+        </p>
+        <p>If we want to change the font for the first paragraph, we can give it the class
+        "font_arial":</p>
+        <p>
+        <code>
+            &lt;p class="font_arial" &gt;1: Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.&lt;/p&gt; <br/>
+            &lt;p&gt;2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+        </code>
+        </p>
+        <p>Adding the class does not do anything on its own. But we can now modify the font
+        for just this class in main.css by adding:</p>
+        <p>
+            <code>.font_arial { <br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-family: arial, sans-serif;<br/>
+                }
+            </code>
+        </p>
+        <p>Note: to select all members of a class, you need to put a period before the class
+            name, e.g. <code>.font_arial</code>.</p>
+
+        <p><br/>Voila, our two paragraphs now use different fonts:</p>
+        <p class="demo_font_arial">1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
+        <p>2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
+
+        <h2>Interactive Experiments</h2>
+        <p>If you just want to experiment with ideas, interactive developer tools are your
+            friend.</p>
+        <p>To access the developer tools in Chrome, right click on an element that you want to
+            change and select "Inspect."</p>
+        <p><img src="images/tutorials/styling_inspect.png"
+            alt="Screenshot of selecting inspect on Chrome to access developer tools."></p>
+        <p>This will open the developer tools</p>
+        <p><img src="images/tutorials/styling_devtools1.png"
+            alt="Screenshot of the Chrome developer tools."></p>
+        <p>At the top, you can see the element that we have currently selected--the paragraph
+        with the arial font.</p>
+        <p>If we want to experiment with further changes, we can just click in the
+        .demo_font_arial box and start to modify it:</p>
+        <p><img src="images/tutorials/styling_devtools_2.png"
+        alt="Screenshot of the Chrome developer tools."></p>
+        <p>The developer tools are very helpful because they give us suggestions about what we
+        might modify. For example, if you start typing "font", you will get the following
+        suggestions:</p>
+        <p><img src="images/tutorials/styling_devtools_3.png"
+        alt="Screenshot of the Chrome developer tools autocomplete suggestions."></p>
+        <p>If we want to make the paragraph bold, we can use <code>font-weight: bold;</code></p>
+        <p><img src="images/tutorials/styling_devtools_4.png"
+        alt="Screenshot of the Chrome developer tools with bolded text."></p>
+        <p>And voila, our text is now bold.</p>
+        <p>Note that all of the changes made in the developer tools are temporary. They will
+            vanish when you reload the page. If you want them to persist, you need to make the
+        same changes to your css file:</p>
+        <p>
+            <code>.font_arial { <br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-family: arial, sans-serif;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold<br/>
+                }
+            </code>
+        </p>
+
+        <p>That should get you started with CSS styling. Have fun exploring!</p>
+
+
     </div>
 </body>
