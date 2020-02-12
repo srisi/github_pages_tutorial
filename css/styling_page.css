@@ -1,0 +1,8 @@
+.header_large{
+    font-size: 6rem;
+    font-family: fantasy;
+}
+
+.header_text_shadow{
+    text-shadow: 0 0 0.5rem red;
+}
